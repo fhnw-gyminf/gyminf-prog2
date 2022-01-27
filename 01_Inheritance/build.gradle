@@ -1,0 +1,20 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+dependencies {
+	testImplementation  'org.junit.jupiter:junit-jupiter:5.8.0'
+}
+
+test {
+	useJUnitPlatform()
+}
