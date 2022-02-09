@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+	flatDir {
+		dirs 'lib'
+	}
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+dependencies {
+	implementation name: 'gui-1.4.1-SNAPSHOT'
+}
+
+dependencies {
+	testImplementation  'org.junit.jupiter:junit-jupiter:5.8.0'
+}
+
+test {
+	useJUnitPlatform()
+}
