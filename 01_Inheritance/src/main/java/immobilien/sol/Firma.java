@@ -1,4 +1,4 @@
-package immobilien;
+package immobilien.sol;
 
 public class Firma {
     public static void main(String[] args) {
@@ -18,9 +18,7 @@ public class Firma {
         Geschaeftshaus g4 = new Geschaeftshaus("Ottos", 1969, 2007000, 2000, 25);
         Geschaeftshaus g5 = new Geschaeftshaus("Oliver", 1993, 930000, 370, 95);
 
-
-
-        Immobilie[] immobilien = new Immobilie[] {w1, w2, w3, w4, w5, g1, g2, g3, g4, g5};
+        Immobilie[] immobilien = new Immobilie[] { w1, w2, g1, g2, w3, w4, w5, g3, g4, g5 };
         for (int i = 0; i < immobilien.length; i++) {
             immobilien[i].print();
         }

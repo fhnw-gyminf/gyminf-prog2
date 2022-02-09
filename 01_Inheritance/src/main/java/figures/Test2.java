@@ -11,9 +11,9 @@ public class Test2 {
 
 		r = (Rectangle) f;
 		r = (TextBox) f;
-//		tb = r;
+		// tb = r;
 		tb = (TextBox) r;
-//		c = (Circle) f;
+		// c = (Circle) f;
 
 		f = null;
 		c = (Circle) f;
