@@ -1,0 +1,31 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Test.java
+
+package ch.fhnw.oop.boxing;
+
+import java.io.PrintStream;
+
+public class Test
+{
+
+    public Test()
+    {
+    }
+
+    public static Integer inc(Integer integer)
+    {
+        return Integer.valueOf(integer.intValue() + 1);
+    }
+
+    public static void main(String args[])
+    {
+        Integer integer = inc(Integer.valueOf(2));
+        System.out.println(integer);
+        Integer integer1 = inc(Integer.valueOf(2));
+        System.out.println(integer1);
+        int i = inc(Integer.valueOf(2)).intValue();
+        System.out.println(i);
+    }
+}

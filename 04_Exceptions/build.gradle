@@ -1,0 +1,35 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+task gradleWrapper(type: Wrapper)
+task zip(type: Zip) {
+	group = 'distribution'
+	dependsOn gradleWrapper
+	from projectDir
+
+	include 'build.gradle'
+	include 'gradle/**'
+	include 'gradlew'
+	include 'gradlew.bat'
+
+	include 'src/main/java/ch/fhnw/oop/exceptions/*.java'
+	include 'src/main/java/ch/fhnw/oop/exceptions/limit/*.java'
+	include 'src/main/java/ch/fhnw/oop/exceptions/flow/*.java'
+	include 'src/main/java/ch/fhnw/oop/exceptions/copy/*.java'
+
+	include 'src/main/java/ch/fhnw/oop/boxing/*.java'
+	include 'src/main/java/ch/fhnw/oop/boxing/*.jad'
+
+	include 'src/main/java/ch/fhnw/oop/enums/*.java'
+
+}
