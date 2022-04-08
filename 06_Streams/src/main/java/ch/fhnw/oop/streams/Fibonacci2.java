@@ -1,4 +1,4 @@
-package gruntz;
+package ch.fhnw.oop.streams;
 
 import java.math.BigInteger;
 import java.util.stream.Stream;
